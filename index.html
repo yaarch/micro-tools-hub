@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickTools Hub - أدوات سريعة وآمنة للمطورين وصناع المحتوى</title>
     <!-- SEO & Search Console Verification -->
-    <meta name="description" content="منصة أدوات رقمية مجانية وسريعة، تشمل ضغط الصور، توليد كلمات المرور، وعداد الكلمات بمعالجة محلية بالكامل لحماية الخصوصية.">
+    <meta name="description" content="منصة أدوات رقمية مجانية وسريعة، تشمل ضغط وتحويل صيغ الصور، توليد رموز QR، وتوليد كلمات المرور بمعالجة محلية بالكامل.">
     <meta name="google-site-verification" content="WXJB5ftONnTgx_tJVynVx2tpSni75tKJOk7kl0CSwQ0">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -45,11 +45,9 @@
 
             <!-- أزرار التحكم واللغة والوضع الليلي -->
             <div class="flex items-center space-x-3 space-x-reverse">
-                <!-- زر تبديل اللغة -->
                 <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-semibold transition">
                     <span id="lang-label">EN</span>
                 </button>
-                <!-- زر تبديل المظهر -->
                 <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="تبديل المظهر">
                     <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -74,9 +72,9 @@
         </div>
 
         <!-- شبكة الأدوات التفاعلية -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             
-            <!-- 1. أداة ضغط الصور (مع تحكم كامل بالجودة) -->
+            <!-- 1. أداة ضغط الصور -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -86,14 +84,10 @@
                             <p data-i18n="img_desc" class="text-xs text-slate-500 dark:text-slate-400">تحكم بدقة الضغط وحجم الملف</p>
                         </div>
                     </div>
-
-                    <!-- منطقة السحب والإفلات -->
                     <div id="drop-zone" class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-6 text-center cursor-pointer hover:border-blue-500 transition-all bg-slate-50/50 dark:bg-slate-900/50 mb-4">
                         <input type="file" id="image-input" accept="image/*" class="hidden">
                         <p data-i18n="drop_text" class="text-sm font-semibold mb-1">اسحب الصورة هنا أو <span class="text-blue-600 underline">اختر ملفاً</span></p>
                     </div>
-
-                    <!-- شريط التحكم بنسبة الجودة -->
                     <div id="controls-container" class="hidden space-y-3 mb-4">
                         <div class="flex justify-between text-sm">
                             <span data-i18n="quality_label">مستوى الجودة:</span>
@@ -101,20 +95,62 @@
                         </div>
                         <input type="range" id="quality-range" min="10" max="100" value="80" class="w-full accent-blue-600 cursor-pointer">
                     </div>
-
-                    <!-- النتيجة -->
-                    <div id="result-container" class="hidden space-y-3 text-sm bg-slate-100 dark:bg-slate-900/70 p-4 rounded-xl mb-4">
+                    <div id="result-container" class="hidden space-y-2 text-sm bg-slate-100 dark:bg-slate-900/70 p-3 rounded-xl mb-4">
                         <div class="flex justify-between"><span>الحجم الأصلي:</span> <span id="original-size" class="font-bold">0 KB</span></div>
                         <div class="flex justify-between"><span>الحجم الجديد:</span> <span id="compressed-size" class="font-bold text-emerald-500">0 KB</span></div>
                     </div>
                 </div>
-
                 <button id="download-btn" class="hidden w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition">
                     <span data-i18n="download_img">تحميل الصورة المضغوطة</span>
                 </button>
             </div>
 
-            <!-- 2. أداة مولد كلمات المرور (مع التحكم بالطول والخيارات) -->
+            <!-- 2. أداة تحويل صيغ الصور (إضافة جديدة) -->
+            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xl">🔄</div>
+                        <div>
+                            <h2 data-i18n="conv_title" class="text-xl font-bold">محول صيغ الصور</h2>
+                            <p data-i18n="conv_desc" class="text-xs text-slate-500 dark:text-slate-400">تحويل إلى صيغة WebP السريعة</p>
+                        </div>
+                    </div>
+                    <div id="conv-drop-zone" class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-6 text-center cursor-pointer hover:border-amber-500 transition-all bg-slate-50/50 dark:bg-slate-900/50 mb-4">
+                        <input type="file" id="conv-image-input" accept="image/*" class="hidden">
+                        <p data-i18n="drop_text" class="text-sm font-semibold mb-1">اختر صورة للتحويل</p>
+                    </div>
+                    <div id="conv-result-container" class="hidden text-sm bg-slate-100 dark:bg-slate-900/70 p-3 rounded-xl mb-4 text-center">
+                        <span class="text-emerald-500 font-bold" data-i18n="ready_webp">تم تجهيز الصورة بصيغة WebP!</span>
+                    </div>
+                </div>
+                <button id="conv-download-btn" class="hidden w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl shadow-lg transition">
+                    <span data-i18n="download_webp">تحميل بصيغة WebP</span>
+                </button>
+            </div>
+
+            <!-- 3. أداة مولد رموز QR Code (إضافة جديدة) -->
+            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-xl">📱</div>
+                        <div>
+                            <h2 data-i18n="qr_title" class="text-xl font-bold">منشئ رموز QR</h2>
+                            <p data-i18n="qr_desc" class="text-xs text-slate-500 dark:text-slate-400">حول الروابط والنصوص إلى QR</p>
+                        </div>
+                    </div>
+                    <input type="text" id="qr-input" data-i18n-placeholder="qr_placeholder" placeholder="اكتب الرابط أو النص هنا..." class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm mb-4 outline-none focus:ring-2 focus:ring-purple-500">
+                    <div class="flex justify-center mb-4">
+                        <div id="qr-code-box" class="bg-white p-3 rounded-xl shadow-inner border border-slate-200 min-h-[120px] flex items-center justify-center">
+                            <span class="text-xs text-slate-400" data-i18n="qr_waiting">سيظهر الكود هنا...</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="generate-qr-btn" class="w-full py-2.5 px-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl shadow-lg transition">
+                    <span data-i18n="generate_qr">إنشاء رمز QR</span>
+                </button>
+            </div>
+
+            <!-- 4. أداة مولد كلمات المرور -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -124,14 +160,10 @@
                             <p data-i18n="pwd_desc" class="text-xs text-slate-500 dark:text-slate-400">حماية فائقة بكلمات معقدة</p>
                         </div>
                     </div>
-
-                    <!-- حقل عرض كلمة المرور -->
                     <div class="relative mb-4">
-                        <input type="text" id="password-output" readonly class="w-full p-3 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-center font-mono font-bold text-lg text-indigo-500">
+                        <input type="text" id="password-output" readonly class="w-full p-3 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-center font-mono font-bold text-base text-indigo-500">
                     </div>
-
-                    <!-- التحكم بالطول -->
-                    <div class="space-y-3 mb-4 text-sm">
+                    <div class="space-y-2 mb-4 text-sm">
                         <div class="flex justify-between">
                             <span data-i18n="pwd_length">الطول:</span>
                             <span id="length-value" class="font-bold">16</span>
@@ -139,13 +171,12 @@
                         <input type="range" id="length-range" min="8" max="32" value="16" class="w-full accent-indigo-600 cursor-pointer">
                     </div>
                 </div>
-
                 <button id="generate-pwd-btn" class="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg transition">
                     <span data-i18n="generate_btn">توليد ونسخ كلمة المرور</span>
                 </button>
             </div>
 
-            <!-- 3. أداة عداد الكلمات والنصوص -->
+            <!-- 5. أداة عداد الكلمات والنصوص -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -155,15 +186,12 @@
                             <p data-i18n="counter_desc" class="text-xs text-slate-500 dark:text-slate-400">تحليل فوري للنصوص والمقالات</p>
                         </div>
                     </div>
-
-                    <textarea id="text-input" rows="4" data-i18n-placeholder="type_here" placeholder="اكتب أو الصق النص هنا..." class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm mb-4 focus:ring-2 focus:ring-emerald-500 outline-none resize-none"></textarea>
-
-                    <div class="grid grid-cols-2 gap-3 text-xs font-semibold bg-slate-100 dark:bg-slate-900/70 p-3 rounded-xl mb-4">
+                    <textarea id="text-input" rows="3" data-i18n-placeholder="type_here" placeholder="اكتب أو الصق النص هنا..." class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm mb-3 outline-none focus:ring-2 focus:ring-emerald-500 resize-none"></textarea>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold bg-slate-100 dark:bg-slate-900/70 p-3 rounded-xl mb-4">
                         <div><span data-i18n="words">الكلمات:</span> <span id="word-count" class="text-emerald-500 text-base font-bold">0</span></div>
                         <div><span data-i18n="chars">الحروف:</span> <span id="char-count" class="text-emerald-500 text-base font-bold">0</span></div>
                     </div>
                 </div>
-
                 <button onclick="clearText()" class="w-full py-2.5 px-4 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 font-bold rounded-xl transition text-sm">
                     <span data-i18n="clear_btn">مسح النص</span>
                 </button>
@@ -177,9 +205,8 @@
         <p>&copy; 2026 QuickTools Hub. <span data-i18n="rights">جميع الحقوق محفوظة. حماية كاملة للخصوصية.</span></p>
     </footer>
 
-    <!-- سكربتات التطبيق والوظائف المتكاملة -->
+    <!-- سكربتات التطبيق المتكاملة -->
     <script>
-        // نظام الترجمة متعدد اللغات (عربي / إنجليزي)
         const translations = {
             ar: {
                 engine: "Hub Engine",
@@ -191,6 +218,15 @@
                 drop_text: "اسحب الصورة هنا أو اختر ملفاً",
                 quality_label: "مستوى الجودة:",
                 download_img: "تحميل الصورة المضغوطة",
+                conv_title: "محول صيغ الصور",
+                conv_desc: "تحويل إلى صيغة WebP السريعة",
+                ready_webp: "تم تجهيز الصورة بصيغة WebP!",
+                download_webp: "تحميل بصيغة WebP",
+                qr_title: "منشئ رموز QR",
+                qr_desc: "حول الروابط والنصوص إلى QR",
+                qr_placeholder: "اكتب الرابط أو النص هنا...",
+                qr_waiting: "سيظهر الكود هنا...",
+                generate_qr: "إنشاء رمز QR",
                 pwd_title: "مولد كلمات المرور",
                 pwd_desc: "حماية فائقة بكلمات معقدة",
                 pwd_length: "الطول:",
@@ -213,6 +249,15 @@
                 drop_text: "Drag image here or choose file",
                 quality_label: "Quality Level:",
                 download_img: "Download Compressed Image",
+                conv_title: "Image Format Converter",
+                conv_desc: "Convert images to fast WebP format",
+                ready_webp: "Image ready in WebP format!",
+                download_webp: "Download WebP Image",
+                qr_title: "QR Code Generator",
+                qr_desc: "Convert links and text to QR",
+                qr_placeholder: "Type link or text here...",
+                qr_waiting: "Code will appear here...",
+                generate_qr: "Generate QR Code",
                 pwd_title: "Password Generator",
                 pwd_desc: "High security with complex words",
                 pwd_length: "Length:",
@@ -235,23 +280,17 @@
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
             document.getElementById('lang-label').textContent = currentLang === 'ar' ? 'EN' : 'AR';
             
-            // تحديث النصوص
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[currentLang][key]) {
-                    el.textContent = translations[currentLang][key];
-                }
+                if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
             });
 
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (translations[currentLang][key]) {
-                    el.placeholder = translations[currentLang][key];
-                }
+                if (translations[currentLang][key]) el.placeholder = translations[currentLang][key];
             });
         }
 
-        // الوضع الليلي
         function toggleDarkMode() {
             const html = document.documentElement;
             if (html.classList.contains('dark')) {
@@ -263,7 +302,7 @@
             }
         }
 
-        // 1. منطق ضغط الصور مع التحكم بالجودة
+        // 1. ضغط الصور
         const dropZone = document.getElementById('drop-zone');
         const imageInput = document.getElementById('image-input');
         const qualityRange = document.getElementById('quality-range');
@@ -341,7 +380,68 @@
             document.body.removeChild(a);
         });
 
-        // 2. مولد كلمات المرور
+        // 2. محول صيغ الصور إلى WebP
+        const convDropZone = document.getElementById('conv-drop-zone');
+        const convImageInput = document.getElementById('conv-image-input');
+        const convResultContainer = document.getElementById('conv-result-container');
+        const convDownloadBtn = document.getElementById('conv-download-btn');
+        let webpBlobUrl = null;
+        let convFileName = 'converted.webp';
+
+        convDropZone.addEventListener('click', () => convImageInput.click());
+        convImageInput.addEventListener('change', (e) => {
+            if (e.target.files.length) handleWebpConversion(e.target.files[0]);
+        });
+
+        function handleWebpConversion(file) {
+            convFileName = file.name.substring(0, file.name.lastIndexOf('.')) + '.webp';
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+
+                    canvas.toBlob((blob) => {
+                        webpBlobUrl = URL.createObjectURL(blob);
+                        convResultContainer.classList.remove('hidden');
+                        convDownloadBtn.classList.remove('hidden');
+                    }, 'image/webp', 0.9);
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        convDownloadBtn.addEventListener('click', () => {
+            if (!webpBlobUrl) return;
+            const a = document.createElement('a');
+            a.href = webpBlobUrl;
+            a.download = convFileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+        // 3. منشئ رموز QR Code (عبر Google Charts API السريع والآمن)
+        const qrInput = document.getElementById('qr-input');
+        const generateQrBtn = document.getElementById('generate-qr-btn');
+        const qrCodeBox = document.getElementById('qr-code-box');
+
+        generateQrBtn.addEventListener('click', () => {
+            const val = qrInput.value.trim();
+            if (!val) {
+                alert(currentLang === 'ar' ? 'الرجاء إدخال نص أو رابط أولاً' : 'Please enter text or link first');
+                return;
+            }
+            const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=${encodeURIComponent(val)}`;
+            qrCodeBox.innerHTML = `<img src="${qrApiUrl}" alt="QR Code" class="rounded-lg shadow-sm">`;
+        });
+
+        // 4. مولد كلمات المرور
         const lengthRange = document.getElementById('length-range');
         const lengthValue = document.getElementById('length-value');
         const passwordOutput = document.getElementById('password-output');
@@ -368,20 +468,17 @@
             navigator.clipboard.writeText(passwordOutput.value);
             alert(currentLang === 'ar' ? 'تم توليد ونسخ كلمة المرور بنجاح!' : 'Password generated and copied successfully!');
         });
+        generatePassword();
 
-        generatePassword(); // توليد افتراضي عند الفتح
-
-        // 3. عداد الكلمات والنصوص
+        // 5. عداد الكلمات
         const textInput = document.getElementById('text-input');
         const wordCount = document.getElementById('word-count');
         const charCount = document.getElementById('char-count');
 
         textInput.addEventListener('input', () => {
             const text = textInput.value.trim();
-            const chars = text.length;
-            const words = text === "" ? 0 : text.split(/\s+/).length;
-            wordCount.textContent = words;
-            charCount.textContent = chars;
+            wordCount.textContent = text === "" ? 0 : text.split(/\s+/).length;
+            charCount.textContent = text.length;
         });
 
         function clearText() {
@@ -390,7 +487,7 @@
             charCount.textContent = "0";
         }
     </script>
-    <!-- كود Cloudflare Web Analytics -->
+    <!-- Cloudflare Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cf8008d7f2f47b29e20ed8c30cba1c7"}'></script>
 </body>
 </html>
