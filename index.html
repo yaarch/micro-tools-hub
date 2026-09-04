@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickTools Hub - أدوات سريعة وآمنة للمطورين وصناع المحتوى</title>
     <!-- SEO & Search Console Verification -->
-    <meta name="description" content="منصة أدوات رقمية مجانية وسريعة، تشمل ضغط وتحويل صيغ الصور، توليد رموز QR، وتوليد كلمات المرور بمعالجة محلية بالكامل.">
+    <meta name="description" content="منصة أدوات رقمية مجانية وسريعة، تشمل ضغط وتعديل الصور، الطقس اللحظي، تحويل العملات، وتوليد رموز QR بمعالجة محلية وفورية.">
     <meta name="google-site-verification" content="WXJB5ftONnTgx_tJVynVx2tpSni75tKJOk7kl0CSwQ0">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,20 +61,85 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span data-i18n="badge" class="inline-block py-1 px-3 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-sm font-semibold mb-4">
-                منصة الأدوات الذكية الآمنة 100%
+                منصة الأدوات الذكية الشاملة الحية
             </span>
             <h1 data-i18n="hero_title" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
-                أدوات رقمية سريعة، مصممة لتوفير وقتك
+                أدوات رقمية ذكية، طقس لحظي وعملات مباشرة
             </h1>
             <p data-i18n="hero_desc" class="text-lg text-slate-600 dark:text-slate-400">
-                جميع الأدوات تعمل مباشرة على متصفحك بمعالجة محلية كاملة دون رفع أي ملفات، لضمان السرعة المطلقة والخصوصية التامة.
+                منصتك المتكاملة التي تجمع بين أدوات المعالجة المحلية السريعة والبيانات الحية المباشرة في مكان واحد لتوفير وقتك.
             </p>
         </div>
 
         <!-- شبكة الأدوات التفاعلية -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             
-            <!-- 1. أداة ضغط الصور -->
+            <!-- 1. أداة الطقس اللحظي (إضافة جديدة حية) -->
+            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl">🌤️</div>
+                        <div>
+                            <h2 data-i18n="weather_title" class="text-xl font-bold">الطقس اللحظي</h2>
+                            <p data-i18n="weather_desc" class="text-xs text-slate-500 dark:text-slate-400">حالة الطقس المباشرة لأي مدينة</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 space-x-reverse mb-4">
+                        <input type="text" id="city-input" data-i18n-placeholder="city_placeholder" placeholder="اكتب اسم المدينة (مثال: Algiers, Cairo, Dubai)..." class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                    <div id="weather-result" class="hidden bg-slate-100 dark:bg-slate-900/70 p-4 rounded-2xl mb-4 text-center space-y-2">
+                        <h3 id="w-city-name" class="font-bold text-base text-sky-500">--</h3>
+                        <div class="text-3xl font-extrabold" id="w-temp">--°C</div>
+                        <p id="w-condition" class="text-xs text-slate-400">--</p>
+                    </div>
+                </div>
+                <button id="get-weather-btn" class="w-full py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl shadow-lg transition">
+                    <span data-i18n="fetch_weather">جلب حالة الطقس</span>
+                </button>
+            </div>
+
+            <!-- 2. محول العملات المباشر (إضافة جديدة حية) -->
+            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl">💱</div>
+                        <div>
+                            <h2 data-i18n="curr_title" class="text-xl font-bold">محول العملات المباشر</h2>
+                            <p data-i18n="curr_desc" class="text-xs text-slate-500 dark:text-slate-400">أسعار الصرف الحية العالمية</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <input type="number" id="amount-input" value="1" min="0" class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm outline-none focus:ring-2 focus:ring-emerald-500">
+                        <div class="grid grid-cols-2 gap-2">
+                            <select id="from-currency" class="p-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm outline-none">
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="SAR">SAR (ر.س)</option>
+                                <option value="AED">AED (د.إ)</option>
+                                <option value="DZD">DZD (د.ج)</option>
+                            </select>
+                            <select id="to-currency" class="p-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm outline-none">
+                                <option value="EUR">EUR (€)</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="SAR">SAR (ر.س)</option>
+                                <option value="AED">AED (د.إ)</option>
+                                <option value="DZD" selected>DZD (د.ج)</option>
+                                <option value="GBP">GBP (£)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="conversion-result" class="hidden bg-slate-100 dark:bg-slate-900/70 p-3 rounded-xl mb-4 text-center">
+                        <span class="text-xs text-slate-400 block" data-i18n="conversion_rate">النتيجة التقريبية المباشرة:</span>
+                        <span id="converted-value" class="text-lg font-extrabold text-emerald-500">0.00</span>
+                    </div>
+                </div>
+                <button id="convert-btn" class="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition">
+                    <span data-i18n="convert_now">تحويل العملة الآن</span>
+                </button>
+            </div>
+
+            <!-- 3. أداة ضغط الصور -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -86,7 +151,7 @@
                     </div>
                     <div id="drop-zone" class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-6 text-center cursor-pointer hover:border-blue-500 transition-all bg-slate-50/50 dark:bg-slate-900/50 mb-4">
                         <input type="file" id="image-input" accept="image/*" class="hidden">
-                        <p data-i18n="drop_text" class="text-sm font-semibold mb-1">اسحب الصورة هنا أو <span class="text-blue-600 underline">اختر ملفاً</span></p>
+                        <p data-i18n="drop_text" class="text-sm font-semibold mb-1">اسحب الصورة هنا أو اختر ملفاً</p>
                     </div>
                     <div id="controls-container" class="hidden space-y-3 mb-4">
                         <div class="flex justify-between text-sm">
@@ -105,7 +170,7 @@
                 </button>
             </div>
 
-            <!-- 2. أداة تحويل صيغ الصور (إضافة جديدة) -->
+            <!-- 4. أداة محول صيغ الصور إلى WebP -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -128,7 +193,7 @@
                 </button>
             </div>
 
-            <!-- 3. أداة مولد رموز QR Code (إضافة جديدة) -->
+            <!-- 5. أداة مولد رموز QR Code -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -150,7 +215,7 @@
                 </button>
             </div>
 
-            <!-- 4. أداة مولد كلمات المرور -->
+            <!-- 6. مولد كلمات المرور -->
             <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
@@ -176,43 +241,30 @@
                 </button>
             </div>
 
-            <!-- 5. أداة عداد الكلمات والنصوص -->
-            <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl">📊</div>
-                        <div>
-                            <h2 data-i18n="counter_title" class="text-xl font-bold">عداد الكلمات</h2>
-                            <p data-i18n="counter_desc" class="text-xs text-slate-500 dark:text-slate-400">تحليل فوري للنصوص والمقالات</p>
-                        </div>
-                    </div>
-                    <textarea id="text-input" rows="3" data-i18n-placeholder="type_here" placeholder="اكتب أو الصق النص هنا..." class="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm mb-3 outline-none focus:ring-2 focus:ring-emerald-500 resize-none"></textarea>
-                    <div class="grid grid-cols-2 gap-2 text-xs font-semibold bg-slate-100 dark:bg-slate-900/70 p-3 rounded-xl mb-4">
-                        <div><span data-i18n="words">الكلمات:</span> <span id="word-count" class="text-emerald-500 text-base font-bold">0</span></div>
-                        <div><span data-i18n="chars">الحروف:</span> <span id="char-count" class="text-emerald-500 text-base font-bold">0</span></div>
-                    </div>
-                </div>
-                <button onclick="clearText()" class="w-full py-2.5 px-4 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 font-bold rounded-xl transition text-sm">
-                    <span data-i18n="clear_btn">مسح النص</span>
-                </button>
-            </div>
-
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="border-t border-slate-200 dark:border-slate-800 mt-20 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
-        <p>&copy; 2026 QuickTools Hub. <span data-i18n="rights">جميع الحقوق محفوظة. حماية كاملة للخصوصية.</span></p>
+        <p>&copy; 2026 QuickTools Hub. <span data-i18n="rights">جميع الحقوق محفوظة. حماية كاملة للخصوصية والبيانات.</span></p>
     </footer>
 
-    <!-- سكربتات التطبيق المتكاملة -->
+    <!-- سكربتات التطبيق والـ APIs الحية -->
     <script>
         const translations = {
             ar: {
                 engine: "Hub Engine",
-                badge: "منصة الأدوات الذكية الآمنة 100%",
-                hero_title: "أدوات رقمية سريعة، مصممة لتوفير وقتك",
-                hero_desc: "جميع الأدوات تعمل مباشرة على متصفحك بمعالجة محلية كاملة دون رفع أي ملفات، لضمان السرعة المطلقة والخصوصية التامة.",
+                badge: "منصة الأدوات الذكية الشاملة الحية",
+                hero_title: "أدوات رقمية ذكية، طقس لحظي وعملات مباشرة",
+                hero_desc: "منصتك المتكاملة التي تجمع بين أدوات المعالجة المحلية السريعة والبيانات الحية المباشرة في مكان واحد لتوفير وقتك.",
+                weather_title: "الطقس اللحظي",
+                weather_desc: "حالة الطقس المباشرة لأي مدينة",
+                city_placeholder: "اكتب اسم المدينة (مثال: Algiers, Cairo, Dubai)...",
+                fetch_weather: "جلب حالة الطقس",
+                curr_title: "محول العملات المباشر",
+                curr_desc: "أسعار الصرف الحية العالمية",
+                conversion_rate: "النتيجة التقريبية المباشرة:",
+                convert_now: "تحويل العملة الآن",
                 img_title: "ضغط الصور الذكي",
                 img_desc: "تحكم بدقة الضغط وحجم الملف",
                 drop_text: "اسحب الصورة هنا أو اختر ملفاً",
@@ -231,19 +283,21 @@
                 pwd_desc: "حماية فائقة بكلمات معقدة",
                 pwd_length: "الطول:",
                 generate_btn: "توليد ونسخ كلمة المرور",
-                counter_title: "عداد الكلمات",
-                counter_desc: "تحليل فوري للنصوص والمقالات",
-                type_here: "اكتب أو الصق النص هنا...",
-                words: "الكلمات:",
-                chars: "الحروف:",
-                clear_btn: "مسح النص",
-                rights: "جميع الحقوق محفوظة. حماية كاملة للخصوصية."
+                rights: "جميع الحقوق محفوظة. حماية كاملة للخصوصية والبيانات."
             },
             en: {
                 engine: "Hub Engine",
-                badge: "100% Secure Smart Tools Platform",
-                hero_title: "Fast Digital Tools, Designed to Save Your Time",
-                hero_desc: "All tools run directly in your browser with complete local processing without uploading files, ensuring ultimate speed and privacy.",
+                badge: "Live All-in-One Smart Tools Platform",
+                hero_title: "Smart Digital Tools, Live Weather & Currencies",
+                hero_desc: "Your integrated platform combining fast local processing tools and live real-time data in one place to save your time.",
+                weather_title: "Live Weather",
+                weather_desc: "Real-time weather for any city",
+                city_placeholder: "Type city name (e.g. Algiers, Cairo, Dubai)...",
+                fetch_weather: "Get Weather",
+                curr_title: "Live Currency Converter",
+                curr_desc: "Global real-time exchange rates",
+                conversion_rate: "Direct estimated result:",
+                convert_now: "Convert Currency Now",
                 img_title: "Smart Image Compressor",
                 img_desc: "Control compression quality and size",
                 drop_text: "Drag image here or choose file",
@@ -262,12 +316,6 @@
                 pwd_desc: "High security with complex words",
                 pwd_length: "Length:",
                 generate_btn: "Generate & Copy Password",
-                counter_title: "Word Counter",
-                counter_desc: "Instant text and article analysis",
-                type_here: "Type or paste text here...",
-                words: "Words:",
-                chars: "Characters:",
-                clear_btn: "Clear Text",
                 rights: "All rights reserved. Complete privacy protection."
             }
         };
@@ -302,7 +350,81 @@
             }
         }
 
-        // 1. ضغط الصور
+        // 1. أداة الطقس الحقيقي (Real-time Weather API)
+        const cityInput = document.getElementById('city-input');
+        const getWeatherBtn = document.getElementById('get-weather-btn');
+        const weatherResult = document.getElementById('weather-result');
+        const wCityName = document.getElementById('w-city-name');
+        const wTemp = document.getElementById('w-temp');
+        const wCondition = document.getElementById('w-condition');
+
+        getWeatherBtn.addEventListener('click', async () => {
+            const cityName = cityInput.value.trim();
+            if (!cityName) {
+                alert(currentLang === 'ar' ? 'الرجاء إدخال اسم المدينة' : 'Please enter a city name');
+                return;
+            }
+            try {
+                // جلب إحداثيات المدينة أولاً
+                const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1`);
+                const geoData = await geoRes.json();
+                
+                if (!geoData.results || geoData.results.length === 0) {
+                    alert(currentLang === 'ar' ? 'لم يتم العثور على هذه المدينة' : 'City not found');
+                    return;
+                }
+
+                const { latitude, longitude, name, country } = geoData.results[0];
+
+                // جلب حالة الطقس الحية بالإحداثيات
+                const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
+                const weatherData = await weatherRes.json();
+
+                wCityName.textContent = `${name}, ${country || ''}`;
+                wTemp.textContent = `${weatherData.current_weather.temperature}°C`;
+                wCondition.textContent = `سرعة الرياح: ${weatherData.current_weather.windspeed} كم/س`;
+                weatherResult.classList.remove('hidden');
+            } catch (error) {
+                alert(currentLang === 'ar' ? 'حدث خطأ أثناء جلب بيانات الطقس' : 'Error fetching weather data');
+            }
+        });
+
+        // 2. محول العملات المباشر (Real-time Currency API)
+        const amountInput = document.getElementById('amount-input');
+        const fromCurrency = document.getElementById('from-currency');
+        const toCurrency = document.getElementById('to-currency');
+        const convertBtn = document.getElementById('convert-btn');
+        const conversionResult = document.getElementById('conversion-result');
+        const convertedValue = document.getElementById('converted-value');
+
+        convertBtn.addEventListener('click', async () => {
+            const amount = parseFloat(amountInput.value);
+            const from = fromCurrency.value;
+            const to = toCurrency.value;
+
+            if (isNaN(amount) || amount <= 0) {
+                alert(currentLang === 'ar' ? 'الرجاء إدخال مبلغ صحيح' : 'Please enter a valid amount');
+                return;
+            }
+
+            try {
+                const res = await fetch(`https://open.er-api.com/v6/latest/${from}`);
+                const data = await res.json();
+
+                if (data && data.rates && data.rates[to]) {
+                    const rate = data.rates[to];
+                    const result = (amount * rate).toFixed(2);
+                    convertedValue.textContent = `${result} ${to}`;
+                    conversionResult.classList.remove('hidden');
+                } else {
+                    alert(currentLang === 'ar' ? 'تعذر جلب سعر الصرف لهذه العملة' : 'Exchange rate not available');
+                }
+            } catch (error) {
+                alert(currentLang === 'ar' ? 'حدث خطأ في الاتصال بخادم العملات' : 'Error connecting to currency server');
+            }
+        });
+
+        // 3. ضغط الصور
         const dropZone = document.getElementById('drop-zone');
         const imageInput = document.getElementById('image-input');
         const qualityRange = document.getElementById('quality-range');
@@ -380,7 +502,7 @@
             document.body.removeChild(a);
         });
 
-        // 2. محول صيغ الصور إلى WebP
+        // 4. محول صيغ الصور إلى WebP
         const convDropZone = document.getElementById('conv-drop-zone');
         const convImageInput = document.getElementById('conv-image-input');
         const convResultContainer = document.getElementById('conv-result-container');
@@ -426,7 +548,7 @@
             document.body.removeChild(a);
         });
 
-        // 3. منشئ رموز QR Code (عبر Google Charts API السريع والآمن)
+        // 5. منشئ رموز QR Code
         const qrInput = document.getElementById('qr-input');
         const generateQrBtn = document.getElementById('generate-qr-btn');
         const qrCodeBox = document.getElementById('qr-code-box');
@@ -441,7 +563,7 @@
             qrCodeBox.innerHTML = `<img src="${qrApiUrl}" alt="QR Code" class="rounded-lg shadow-sm">`;
         });
 
-        // 4. مولد كلمات المرور
+        // 6. مولد كلمات المرور
         const lengthRange = document.getElementById('length-range');
         const lengthValue = document.getElementById('length-value');
         const passwordOutput = document.getElementById('password-output');
@@ -469,23 +591,6 @@
             alert(currentLang === 'ar' ? 'تم توليد ونسخ كلمة المرور بنجاح!' : 'Password generated and copied successfully!');
         });
         generatePassword();
-
-        // 5. عداد الكلمات
-        const textInput = document.getElementById('text-input');
-        const wordCount = document.getElementById('word-count');
-        const charCount = document.getElementById('char-count');
-
-        textInput.addEventListener('input', () => {
-            const text = textInput.value.trim();
-            wordCount.textContent = text === "" ? 0 : text.split(/\s+/).length;
-            charCount.textContent = text.length;
-        });
-
-        function clearText() {
-            textInput.value = "";
-            wordCount.textContent = "0";
-            charCount.textContent = "0";
-        }
     </script>
     <!-- Cloudflare Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cf8008d7f2f47b29e20ed8c30cba1c7"}'></script>
