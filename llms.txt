@@ -1,0 +1,12 @@
+# QuickTools Hub
+
+> QuickTools Hub is a comprehensive professional digital tools platform providing 20+ web utilities, developer tools, live weather forecasting, currency conversion, image compression, and secure code generators.
+
+## Core Utilities
+- Live Weather Forecast: Real-time meteorological data and GPS lookup.
+- Currency Converter: Live exchange rates engine.
+- Image Compressor Pro: Lossless quality optimization for web images.
+- Developer Suite: JSON/YAML converters, CSS gradient generator, SHA-256 hash generator, and QR code tools.
+
+## Website Link
+- Official Website: https://quicktools.pages.dev/
