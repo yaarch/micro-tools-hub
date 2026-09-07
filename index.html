@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickTools Hub - Professional Digital Suite & Free Web Tools</title>
-    <!-- SEO & Search Console Verification -->
-    <meta name="description" content="Comprehensive professional digital tools platform including live weather, currency converter, image compression, and secure code generator.">
+    <meta name="description" content="Comprehensive professional digital tools platform including live weather, currency converter, image compression, secure code generator, SEO tools, and utilities.">
     <meta name="google-site-verification" content="WXJB5ftONnTgx_tJVynVx2tpSni75tKJOk7kl0CSwQ0">
     
-    <!-- Favicon (أيقونة الموقع المصغرة) -->
+    <!-- Cloudflare Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cf8008d7f2f47b29e20ed8c30cba1c7"}'></script>
+    
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3659/3659899.png">
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,7 +24,6 @@
             }
         }
     </script>
-    <!-- Google Fonts: Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Cairo', sans-serif; }
@@ -33,33 +31,27 @@
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen selection:bg-blue-600 selection:text-white transition-colors duration-300">
 
-    <!-- Header الاحترافي -->
+    <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- الشعار -->
             <div class="flex items-center space-x-3">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-blue-500/20">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-blue-500/25">
                     Q
                 </div>
                 <div>
                     <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">QuickTools Hub</span>
-                    <span data-i18n="engine" class="text-xs block text-blue-400 font-semibold uppercase tracking-wider">Enterprise Suite</span>
+                    <span data-i18n="engine" class="text-xs block text-blue-400 font-semibold uppercase tracking-wider">Enterprise Suite v2.0</span>
                 </div>
             </div>
 
-            <!-- أزرار التحكم واللغات المتقدمة -->
             <div class="flex items-center space-x-3">
-                <!-- قائمة اللغات -->
-                <div class="relative">
-                    <select id="lang-select" onchange="changeLanguage(this.value)" class="bg-slate-800 border border-slate-700 text-slate-200 text-xs font-semibold rounded-xl px-3 py-2 outline-none cursor-pointer hover:border-blue-500 transition">
-                        <option value="en" selected>English (EN)</option>
-                        <option value="ar">العربية (AR)</option>
-                        <option value="fr">Français (FR)</option>
-                        <option value="es">Español (ES)</option>
-                    </select>
-                </div>
+                <select id="lang-select" onchange="changeLanguage(this.value)" class="bg-slate-800 border border-slate-700 text-slate-200 text-xs font-semibold rounded-xl px-3 py-2 outline-none cursor-pointer hover:border-blue-500 transition">
+                    <option value="en" selected>English (EN)</option>
+                    <option value="ar">العربية (AR)</option>
+                    <option value="fr">Français (FR)</option>
+                    <option value="es">Español (ES)</option>
+                </select>
 
-                <!-- الوضع الليلي -->
                 <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white transition shadow-sm" aria-label="Toggle Theme">
                     <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -69,651 +61,609 @@
         </div>
     </header>
 
-    <!-- القسم الرئيسي -->
+    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span data-i18n="badge" class="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
                 <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                <span>Next-Gen Web Utilities</span>
+                <span>Professional Pro Tools Suite</span>
             </span>
             <h1 data-i18n="hero_title" class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 text-white">
                 Professional Digital Platform for All Your Needs
             </h1>
             <p data-i18n="hero_desc" class="text-slate-400 text-base sm:text-lg leading-relaxed">
-                High-performance professional tools running entirely locally for complete privacy, powered by live real-time data.
+                Advanced, lightning-fast professional web utilities designed for absolute data privacy and top-tier performance.
             </p>
         </div>
 
-        <!-- فلاتر التنقل بين الأقسام (Tabs) -->
+        <!-- Category Tabs -->
         <div class="flex flex-wrap justify-center gap-2 mb-12">
-            <button onclick="filterTools('all')" id="filter-all" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition">
-                <span data-i18n="tab_all">All Tools</span>
-            </button>
-            <button onclick="filterTools('live')" id="filter-live" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">
-                <span data-i18n="tab_live">Live Data (API)</span>
-            </button>
-            <button onclick="filterTools('media')" id="filter-media" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">
-                <span data-i18n="tab_media">Media & Images</span>
-            </button>
-            <button onclick="filterTools('security')" id="filter-security" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">
-                <span data-i18n="tab_security">Security & Codes</span>
-            </button>
+            <button onclick="filterTools('all')" id="filter-all" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition">All Tools</button>
+            <button onclick="filterTools('live')" id="filter-live" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">Live Data</button>
+            <button onclick="filterTools('media')" id="filter-media" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">Media & Text</button>
+            <button onclick="filterTools('security')" id="filter-security" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">Security & Codes</button>
+            <button onclick="filterTools('seo')" id="filter-seo" class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition">SEO & Web Dev</button>
         </div>
 
-        <!-- شبكة الأدوات الاحترافية -->
+        <!-- Tools Grid (16 Professional Tools) -->
         <div id="tools-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             
-            <!-- 1. أداة الطقس اللحظي المطورة (فئة: live) -->
-            <div data-category="live" class="tool-card bg-slate-800/60 border border-slate-700/80 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-slate-600 transition">
+            <!-- 1. Advanced Live Weather -->
+            <div data-category="live" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-sky-500/50 transition">
                 <div>
                     <div class="flex items-center space-x-3 mb-5">
                         <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-2xl">🌤️</div>
                         <div>
-                            <h2 data-i18n="weather_title" class="text-lg font-bold text-white">Advanced Live Weather</h2>
-                            <p data-i18n="weather_desc" class="text-xs text-slate-400">High precision real-time weather details</p>
+                            <h2 class="text-lg font-bold text-white">Advanced Live Weather</h2>
+                            <p class="text-xs text-slate-400">Real-time meteorological forecast</p>
                         </div>
                     </div>
-                    <div class="mb-4">
-                        <input type="text" id="city-input" data-i18n-placeholder="city_placeholder" placeholder="Type city name (e.g., Batna, Algiers, Riyadh)..." class="w-full p-3.5 bg-slate-900 border border-slate-700 rounded-2xl text-sm text-white outline-none focus:border-sky-500 transition">
+                    <div class="flex space-x-2 mb-4">
+                        <input type="text" id="city-input" placeholder="Enter city name..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-sm text-white outline-none focus:border-sky-500 transition">
+                        <button onclick="getWeatherByGPS()" title="Use GPS Location" class="p-3 bg-slate-900 border border-slate-700 rounded-2xl text-sky-400 hover:bg-slate-800 transition">📍</button>
                     </div>
-                    <div id="weather-result" class="hidden bg-slate-900/80 border border-slate-700/50 p-4 rounded-2xl mb-4 space-y-2 text-center">
+                    <div id="weather-result" class="hidden bg-slate-900/90 border border-slate-700/60 p-4 rounded-2xl mb-4 space-y-2 text-center">
                         <h3 id="w-city-name" class="font-bold text-sm text-sky-400">--</h3>
                         <div class="text-3xl font-extrabold text-white" id="w-temp">--°C</div>
                         <div class="flex justify-around text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <div><span class="text-slate-400 block" data-i18n="wind_speed">Wind</span><span id="w-wind" class="font-bold">-- km/h</span></div>
-                            <div><span class="text-slate-400 block" data-i18n="humidity">Humidity</span><span id="w-humidity" class="font-bold">--%</span></div>
+                            <div><span class="text-slate-400 block">Wind</span><span id="w-wind" class="font-bold">-- km/h</span></div>
+                            <div><span class="text-slate-400 block">Condition</span><span id="w-cond" class="font-bold">Clear</span></div>
                         </div>
                     </div>
                 </div>
-                <button id="get-weather-btn" class="w-full py-3 px-4 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-2xl shadow-lg shadow-sky-600/20 transition text-sm">
-                    <span data-i18n="fetch_weather">Get Weather</span>
-                </button>
+                <button onclick="getWeather()" class="w-full py-3 px-4 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-2xl shadow-lg shadow-sky-600/20 transition text-sm">Fetch Weather Data</button>
             </div>
 
-            <!-- 2. محول العملات العالمي مع الأعلام (فئة: live) -->
-            <div data-category="live" class="tool-card bg-slate-800/60 border border-slate-700/80 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-slate-600 transition">
+            <!-- 2. Global Currency Converter -->
+            <div data-category="live" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-emerald-500/50 transition">
                 <div>
                     <div class="flex items-center space-x-3 mb-5">
                         <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-2xl">💱</div>
                         <div>
-                            <h2 data-i18n="curr_title" class="text-lg font-bold text-white">Global Currency Converter</h2>
-                            <p data-i18n="curr_desc" class="text-xs text-slate-400">Live rates with country flags & major currencies</p>
+                            <h2 class="text-lg font-bold text-white">Currency Converter</h2>
+                            <p class="text-xs text-slate-400">Live exchange rates engine</p>
                         </div>
                     </div>
                     <div class="space-y-3 mb-4">
-                        <input type="number" id="amount-input" value="1" min="0" class="w-full p-3.5 bg-slate-900 border border-slate-700 rounded-2xl text-sm text-white outline-none focus:border-emerald-500 transition">
-                        <div class="grid grid-cols-2 gap-2">
+                        <input type="number" id="amount-input" value="1" min="0" class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-sm text-white outline-none focus:border-emerald-500 transition">
+                        <div class="grid grid-cols-[1fr,auto,1fr] gap-2 items-center">
                             <select id="from-currency" class="p-3 bg-slate-900 border border-slate-700 rounded-2xl text-xs text-slate-200 outline-none">
-                                <option value="USD">🇺🇸 USD - US Dollar</option>
-                                <option value="EUR">🇪🇺 EUR - Euro</option>
-                                <option value="GBP">🇬🇧 GBP - British Pound</option>
-                                <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
-                                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
-                                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
-                                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
-                                <option value="SAR">🇸🇦 SAR - Saudi Riyal</option>
-                                <option value="AED">🇦🇪 AED - UAE Dirham</option>
-                                <option value="DZD">🇩🇿 DZD - Algerian Dinar</option>
-                                <option value="EGP">🇪🇬 EGP - Egyptian Pound</option>
-                                <option value="MAD">🇲🇦 MAD - Moroccan Dirham</option>
-                                <option value="TND">🇹🇳 TND - Tunisian Dinar</option>
-                                <option value="QAR">🇶🇦 QAR - Qatari Riyal</option>
-                                <option value="KWD">🇰🇼 KWD - Kuwaiti Dinar</option>
-                                <option value="BHD">🇧🇭 BHD - Bahraini Dinar</option>
-                                <option value="OMR">🇴🇲 OMR - Omani Rial</option>
-                                <option value="JOD">🇯🇴 JOD - Jordanian Dinar</option>
-                                <option value="TRY">🇹🇷 TRY - Turkish Lira</option>
-                                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                                <option value="USD" selected>USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="SAR">SAR</option><option value="DZD">DZD</option>
                             </select>
+                            <button onclick="swapCurrencies()" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-emerald-400 hover:bg-slate-800 transition text-xs font-bold">⇄</button>
                             <select id="to-currency" class="p-3 bg-slate-900 border border-slate-700 rounded-2xl text-xs text-slate-200 outline-none">
-                                <option value="USD">🇺🇸 USD - US Dollar</option>
-                                <option value="EUR">🇪🇺 EUR - Euro</option>
-                                <option value="GBP">🇬🇧 GBP - British Pound</option>
-                                <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
-                                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
-                                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
-                                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
-                                <option value="SAR">🇸🇦 SAR - Saudi Riyal</option>
-                                <option value="AED">🇦🇪 AED - UAE Dirham</option>
-                                <option value="DZD" selected>🇩🇿 DZD - Algerian Dinar</option>
-                                <option value="EGP">🇪🇬 EGP - Egyptian Pound</option>
-                                <option value="MAD">🇲🇦 MAD - Moroccan Dirham</option>
-                                <option value="TND">🇹🇳 TND - Tunisian Dinar</option>
-                                <option value="QAR">🇶🇦 QAR - Qatari Riyal</option>
-                                <option value="KWD">🇰🇼 KWD - Kuwaiti Dinar</option>
-                                <option value="BHD">🇧🇭 BHD - Bahraini Dinar</option>
-                                <option value="OMR">🇴🇲 OMR - Omani Rial</option>
-                                <option value="JOD">🇯🇴 JOD - Jordanian Dinar</option>
-                                <option value="TRY">🇹🇷 TRY - Turkish Lira</option>
-                                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                                <option value="USD">USD</option><option value="EUR" selected>EUR</option><option value="GBP">GBP</option><option value="SAR">SAR</option><option value="DZD">DZD</option>
                             </select>
                         </div>
                     </div>
-                    <div id="conversion-result" class="hidden bg-slate-900/80 border border-slate-700/50 p-3.5 rounded-2xl mb-4 text-center">
-                        <span class="text-xs text-slate-400 block mb-1" data-i18n="conversion_rate">Direct live rate:</span>
+                    <div id="conversion-result" class="hidden bg-slate-900/90 border border-slate-700/60 p-3.5 rounded-2xl mb-4 text-center">
+                        <span class="text-xs text-slate-400 block mb-1">Converted Total:</span>
                         <span id="converted-value" class="text-xl font-extrabold text-emerald-400">0.00</span>
                     </div>
                 </div>
-                <button id="convert-btn" class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/20 transition text-sm">
-                    <span data-i18n="convert_now">Convert Currency Now</span>
-                </button>
+                <button onclick="convertCurrency()" class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/20 transition text-sm">Convert Now</button>
             </div>
 
-            <!-- 3. أداة ضغط الصور (فئة: media) -->
-            <div data-category="media" class="tool-card bg-slate-800/60 border border-slate-700/80 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-slate-600 transition">
+            <!-- 3. Smart Image Compressor Pro -->
+            <div data-category="media" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-blue-500/50 transition">
                 <div>
                     <div class="flex items-center space-x-3 mb-5">
                         <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-2xl">🖼️</div>
                         <div>
-                            <h2 data-i18n="img_title" class="text-lg font-bold text-white">Smart Image Compressor</h2>
-                            <p data-i18n="img_desc" class="text-xs text-slate-400">Control quality and file size</p>
+                            <h2 class="text-lg font-bold text-white">Image Compressor Pro</h2>
+                            <p class="text-xs text-slate-400">Lossless quality optimization</p>
                         </div>
                     </div>
-                    <div id="drop-zone" class="border-2 border-dashed border-slate-700 rounded-2xl p-5 text-center cursor-pointer hover:border-blue-500 transition-all bg-slate-900/50 mb-4">
-                        <input type="file" id="image-input" accept="image/*" class="hidden">
-                        <p data-i18n="drop_text" class="text-xs font-semibold text-slate-300">Drag image here or choose file</p>
+                    <div onclick="document.getElementById('image-input').click()" class="border-2 border-dashed border-slate-700 rounded-2xl p-4 text-center cursor-pointer hover:border-blue-500 transition bg-slate-900/50 mb-4">
+                        <input type="file" id="image-input" accept="image/*" class="hidden" onchange="handleImage(this)">
+                        <p class="text-xs font-semibold text-slate-300">Drop image or Click to upload</p>
                     </div>
                     <div id="controls-container" class="hidden space-y-2 mb-4">
                         <div class="flex justify-between text-xs text-slate-400">
-                            <span data-i18n="quality_label">Quality Level:</span>
-                            <span id="quality-value" class="font-bold text-blue-400">80%</span>
+                            <span>Quality: <strong id="quality-value" class="text-blue-400">80%</strong></span>
                         </div>
-                        <input type="range" id="quality-range" min="10" max="100" value="80" class="w-full accent-blue-500 cursor-pointer">
+                        <input type="range" id="quality-range" min="10" max="95" value="80" class="w-full accent-blue-500 cursor-pointer" oninput="updateQuality(this.value)">
                     </div>
-                    <div id="result-container" class="hidden space-y-1 text-xs bg-slate-900/80 border border-slate-700/50 p-3 rounded-2xl mb-4">
-                        <div class="flex justify-between text-slate-400"><span>Original Size:</span> <span id="original-size" class="font-bold text-white">0 KB</span></div>
-                        <div class="flex justify-between text-slate-400"><span>Compressed Size:</span> <span id="compressed-size" class="font-bold text-emerald-400">0 KB</span></div>
+                    <div id="result-container" class="hidden space-y-1 text-xs bg-slate-900/90 border border-slate-700/60 p-3 rounded-2xl mb-4">
+                        <div class="flex justify-between text-slate-400"><span>Original:</span> <span id="original-size" class="font-bold text-white">0 KB</span></div>
+                        <div class="flex justify-between text-slate-400"><span>Optimized:</span> <span id="compressed-size" class="font-bold text-emerald-400">0 KB</span></div>
                     </div>
                 </div>
-                <button id="download-btn" class="hidden w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 transition text-sm">
-                    <span data-i18n="download_img">Download Compressed Image</span>
-                </button>
+                <a id="download-btn" class="hidden text-center w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 transition text-sm">Download Optimized Image</a>
             </div>
 
-            <!-- 4. محول صيغ الصور WebP (فئة: media) -->
-            <div data-category="media" class="tool-card bg-slate-800/60 border border-slate-700/80 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-slate-600 transition">
+            <!-- 4. Advanced Word & Text Metrics -->
+            <div data-category="media" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-amber-500/50 transition">
                 <div>
                     <div class="flex items-center space-x-3 mb-5">
-                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-2xl">🔄</div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-2xl">📝</div>
                         <div>
-                            <h2 data-i18n="conv_title" class="text-lg font-bold text-white">Image Format Converter</h2>
-                            <p data-i18n="conv_desc" class="text-xs text-slate-400">Convert to fast WebP format</p>
+                            <h2 class="text-lg font-bold text-white">Word & Metrics Analyzer</h2>
+                            <p class="text-xs text-slate-400">Read time & text metrics</p>
                         </div>
                     </div>
-                    <div id="conv-drop-zone" class="border-2 border-dashed border-slate-700 rounded-2xl p-5 text-center cursor-pointer hover:border-amber-500 transition-all bg-slate-900/50 mb-4">
-                        <input type="file" id="conv-image-input" accept="image/*" class="hidden">
-                        <p data-i18n="drop_text" class="text-xs font-semibold text-slate-300">Drag image here or choose file</p>
-                    </div>
-                    <div id="conv-result-container" class="hidden text-xs bg-slate-900/80 border border-slate-700/50 p-3.5 rounded-2xl mb-4 text-center">
-                        <span class="text-amber-400 font-bold" data-i18n="ready_webp">Image ready in WebP format!</span>
+                    <textarea id="text-counter-input" oninput="countText()" rows="3" placeholder="Type text here..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-xs text-white outline-none focus:border-amber-500 mb-3 resize-none"></textarea>
+                    <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                        <div class="bg-slate-900/90 p-2 rounded-xl border border-slate-700/50"><span class="text-[10px] text-slate-400 block">Words</span><span id="word-count" class="font-bold text-amber-400">0</span></div>
+                        <div class="bg-slate-900/90 p-2 rounded-xl border border-slate-700/50"><span class="text-[10px] text-slate-400 block">Chars</span><span id="char-count" class="font-bold text-amber-400">0</span></div>
+                        <div class="bg-slate-900/90 p-2 rounded-xl border border-slate-700/50"><span class="text-[10px] text-slate-400 block">Read Time</span><span id="read-time" class="font-bold text-amber-400">0s</span></div>
                     </div>
                 </div>
-                <button id="conv-download-btn" class="hidden w-full py-3 px-4 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-2xl shadow-lg shadow-amber-600/20 transition text-sm">
-                    <span data-i18n="download_webp">Download WebP</span>
-                </button>
+                <button onclick="clearTextCounter()" class="w-full mt-4 py-2.5 px-4 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold rounded-xl transition text-xs">Clear Text</button>
             </div>
 
-            <!-- 5. منشئ رموز QR (فئة: security) -->
-            <div data-category="security" class="tool-card bg-slate-800/60 border border-slate-700/80 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-slate-600 transition">
+            <!-- 5. QR Code Generator Pro -->
+            <div data-category="security" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-purple-500/50 transition">
                 <div>
                     <div class="flex items-center space-x-3 mb-5">
                         <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-2xl">📱</div>
                         <div>
-                            <h2 data-i18n="qr_title" class="text-lg font-bold text-white">QR Code Generator</h2>
-                            <p data-i18n="qr_desc" class="text-xs text-slate-400">Convert links to fast QR codes</p>
+                            <h2 class="text-lg font-bold text-white">QR Code Generator Pro</h2>
+                            <p class="text-xs text-slate-400">Instant high-res QR rendering</p>
                         </div>
                     </div>
-                    <input type="text" id="qr-input" data-i18n-placeholder="qr_placeholder" placeholder="Type link or text here..." class="w-full p-3.5 bg-slate-900 border border-slate-700 rounded-2xl text-sm text-white mb-4 outline-none focus:border-purple-500 transition">
-                    <div class="flex justify-center mb-4">
-                        <div id="qr-code-box" class="bg-white p-3 rounded-2xl shadow-inner border border-slate-700 min-h-[110px] flex items-center justify-center">
-                            <span class="text-xs text-slate-400" data-i18n="qr_waiting">Code will appear here...</span>
+                    <input type="text" id="qr-input" placeholder="Enter URL or text..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-xs text-white mb-3 outline-none focus:border-purple-500 transition">
+                    <div class="flex justify-center mb-3">
+                        <div id="qr-code-box" class="bg-white p-2.5 rounded-2xl shadow-inner border border-slate-700 min-h-[100px] flex items-center justify-center">
+                            <span class="text-xs text-slate-400">Preview area</span>
                         </div>
                     </div>
                 </div>
-                <button id="generate-qr-btn" class="w-full py-3 px-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-2xl shadow-lg shadow-purple-600/20 transition text-sm">
-                    <span data-i18n="generate_qr">Generate QR Code</span>
-                </button>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="generateQRCode()" class="py-2.5 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl text-xs transition">Generate</button>
+                    <button onclick="downloadQRCode()" class="py-2.5 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold rounded-xl text-xs transition">Download</button>
+                </div>
             </div>
 
-            <!-- 6. مولد كلمات المرور (فئة: security) -->
-            <div data-category="security" class="tool-card bg-slate-800/60 border border-slate-700/80 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-slate-600 transition">
+            <!-- 6. Secure Password Generator Pro -->
+            <div data-category="security" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-indigo-500/50 transition">
                 <div>
                     <div class="flex items-center space-x-3 mb-5">
                         <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-2xl">🔒</div>
                         <div>
-                            <h2 data-i18n="pwd_title" class="text-lg font-bold text-white">Password Generator</h2>
-                            <p data-i18n="pwd_desc" class="text-xs text-slate-400">High security complex passwords</p>
+                            <h2 class="text-lg font-bold text-white">Password Generator Pro</h2>
+                            <p class="text-xs text-slate-400">Cryptographic secure keys</p>
                         </div>
                     </div>
-                    <div class="relative mb-4">
-                        <input type="text" id="password-output" readonly class="w-full p-3.5 bg-slate-900 border border-slate-700 rounded-2xl text-center font-mono font-bold text-sm text-indigo-400">
-                    </div>
-                    <div class="space-y-2 mb-4 text-xs text-slate-400">
-                        <div class="flex justify-between">
-                            <span data-i18n="pwd_length">Length:</span>
-                            <span id="length-value" class="font-bold text-white">16</span>
-                        </div>
-                        <input type="range" id="length-range" min="8" max="32" value="16" class="w-full accent-indigo-500 cursor-pointer">
+                    <input type="text" id="password-output" readonly class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-center font-mono font-bold text-xs text-indigo-400 mb-3" value="Click generate">
+                    <div class="space-y-2 mb-3 text-xs text-slate-400">
+                        <div class="flex justify-between"><span>Length: <strong id="length-value" class="text-white">16</strong></span></div>
+                        <input type="range" id="length-range" min="8" max="32" value="16" class="w-full accent-indigo-500 cursor-pointer" oninput="document.getElementById('length-value').innerText = this.value">
                     </div>
                 </div>
-                <button id="generate-pwd-btn" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/20 transition text-sm">
-                    <span data-i18n="generate_btn">Generate & Copy Password</span>
-                </button>
+                <button onclick="generatePassword()" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-600/20 transition text-sm">Generate & Copy</button>
+            </div>
+
+            <!-- 7. SHA-256 Hash Pro -->
+            <div data-category="security" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-rose-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-2xl">🔑</div>
+                        <div>
+                            <h2 class="text-lg font-bold text-white">SHA-256 Hash Generator</h2>
+                            <p class="text-xs text-slate-400">Cryptographic hashing engine</p>
+                        </div>
+                    </div>
+                    <input type="text" id="hash-input" oninput="generateHash()" placeholder="Type to hash..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-xs text-white mb-3 outline-none focus:border-rose-500 transition">
+                    <div class="bg-slate-900/90 border border-slate-700/60 p-2.5 rounded-2xl text-center">
+                        <span id="hash-output" class="text-[11px] font-mono text-rose-400 break-all">--</span>
+                    </div>
+                </div>
+                <button onclick="copyHash()" class="w-full mt-3 py-2.5 px-4 bg-rose-600 hover:bg-rose-500 text-white font-bold rounded-xl transition text-xs">Copy Hash Result</button>
+            </div>
+
+            <!-- 8. Smart Case Converter Pro -->
+            <div data-category="media" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-teal-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-2xl">🔠</div>
+                        <div>
+                            <h2 class="text-lg font-bold text-white">Smart Case Converter</h2>
+                            <p class="text-xs text-slate-400">Advanced text case formatter</p>
+                        </div>
+                    </div>
+                    <textarea id="case-input" rows="2" placeholder="Type text here..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-2xl text-xs text-white outline-none focus:border-teal-500 mb-3 resize-none"></textarea>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <button onclick="convertCase('upper')" class="py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-teal-400 rounded-xl font-bold transition">UPPERCASE</button>
+                        <button onclick="convertCase('lower')" class="py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-teal-400 rounded-xl font-bold transition">lowercase</button>
+                    </div>
+                </div>
+                <button onclick="convertCase('title')" class="w-full mt-3 py-2.5 px-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition text-xs">Convert to Title Case</button>
+            </div>
+
+            <!-- 9. SEO Meta Tags Generator Pro -->
+            <div data-category="seo" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-orange-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center font-bold text-2xl">📈</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">SEO Meta Tags Generator</h2>
+                            <p class="text-xs text-slate-400">Search engine snippet creator</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mb-3">
+                        <input type="text" id="meta-title" placeholder="Site Title" class="w-full p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-orange-500">
+                        <input type="text" id="meta-desc" placeholder="Meta Description" class="w-full p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-orange-500">
+                    </div>
+                    <textarea id="meta-output" rows="2" readonly class="w-full p-2 bg-slate-950 border border-slate-800 rounded-xl text-[10px] font-mono text-orange-400 outline-none resize-none" placeholder="HTML code output..."></textarea>
+                </div>
+                <button onclick="generateMetaTags()" class="w-full mt-3 py-2.5 px-4 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-xl transition text-xs">Generate Meta Tags</button>
+            </div>
+
+            <!-- 10. Robots.txt Generator Pro -->
+            <div data-category="seo" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-yellow-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 flex items-center justify-center font-bold text-2xl">🤖</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">Robots.txt Generator</h2>
+                            <p class="text-xs text-slate-400">Web crawler configuration</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mb-3 text-xs text-slate-400">
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="checkbox" id="allow-all" checked class="accent-yellow-500"><span>Allow all crawlers</span></label>
+                        <input type="text" id="sitemap-url" placeholder="Sitemap URL (optional)" class="w-full p-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-yellow-500">
+                    </div>
+                    <textarea id="robots-output" rows="2" readonly class="w-full p-2 bg-slate-950 border border-slate-800 rounded-xl text-[10px] font-mono text-yellow-400 outline-none resize-none">User-agent: *&#10;Allow: /</textarea>
+                </div>
+                <button onclick="generateRobots()" class="w-full mt-3 py-2.5 px-4 bg-yellow-600 hover:bg-yellow-500 text-slate-950 font-bold rounded-xl transition text-xs">Generate Robots.txt</button>
+            </div>
+
+            <!-- 11. URL Slug Generator Pro -->
+            <div data-category="seo" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-cyan-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-2xl">🔗</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">URL Slug Generator</h2>
+                            <p class="text-xs text-slate-400">Clean title into permalink</p>
+                        </div>
+                    </div>
+                    <input type="text" id="slug-input" oninput="generateSlug()" placeholder="Enter article title..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-cyan-500 mb-3">
+                    <div class="bg-slate-950 border border-slate-800 p-2.5 rounded-xl text-center">
+                        <span id="slug-output" class="text-xs font-mono text-cyan-400 break-all">--</span>
+                    </div>
+                </div>
+                <button onclick="copySlug()" class="w-full mt-3 py-2.5 px-4 bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold rounded-xl transition text-xs">Copy Slug</button>
+            </div>
+
+            <!-- 12. Text Cleaner Pro -->
+            <div data-category="seo" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-violet-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center font-bold text-2xl">🧹</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">Text Cleaner Pro</h2>
+                            <p class="text-xs text-slate-400">Remove spaces and extra breaks</p>
+                        </div>
+                    </div>
+                    <textarea id="cleaner-input" rows="3" placeholder="Paste messy text here..." class="w-full p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-violet-500 mb-3 resize-none"></textarea>
+                </div>
+                <button onclick="cleanText()" class="w-full py-2.5 px-4 bg-violet-600 hover:bg-violet-500 text-white font-bold rounded-xl transition text-xs">Clean Text Spaces</button>
+            </div>
+
+            <!-- 13. Health BMI Calculator Pro -->
+            <div data-category="live" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-pink-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-2xl">💪</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">BMI Calculator Pro</h2>
+                            <p class="text-xs text-slate-400">Body mass index evaluation</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <input type="number" id="bmi-weight" placeholder="Weight (kg)" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-pink-500">
+                        <input type="number" id="bmi-height" placeholder="Height (cm)" class="p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-pink-500">
+                    </div>
+                    <div id="bmi-result" class="hidden bg-slate-950 border border-slate-800 p-2.5 rounded-xl text-center text-xs text-pink-400 font-bold">
+                        BMI: <span id="bmi-value">0</span> (<span id="bmi-status">Normal</span>)
+                    </div>
+                </div>
+                <button onclick="calculateBMI()" class="w-full mt-3 py-2.5 px-4 bg-pink-600 hover:bg-pink-500 text-white font-bold rounded-xl transition text-xs">Calculate BMI</button>
+            </div>
+
+            <!-- 14. HEX to RGB Color Converter Pro -->
+            <div data-category="media" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-lime-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-lime-500/10 border border-lime-500/20 text-lime-400 flex items-center justify-center font-bold text-2xl">🎨</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">HEX to RGB Converter</h2>
+                            <p class="text-xs text-slate-400">Color format transformer</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 mb-3">
+                        <input type="text" id="hex-input" placeholder="#3b82f6" oninput="convertHexToRgb()" class="w-full p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-lime-500">
+                        <div id="color-preview" class="w-10 h-10 rounded-xl border border-slate-700 bg-blue-500 shrink-0"></div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 p-2.5 rounded-xl text-center">
+                        <span id="rgb-output" class="text-xs font-mono text-lime-400">rgb(59, 130, 246)</span>
+                    </div>
+                </div>
+                <button onclick="convertHexToRgb()" class="w-full mt-3 py-2.5 px-4 bg-lime-600 hover:bg-slate-950 text-slate-950 font-bold rounded-xl transition text-xs">Convert Color</button>
+            </div>
+
+            <!-- 15. Lorem Ipsum Generator Pro -->
+            <div data-category="seo" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-red-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center font-bold text-2xl">📄</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">Lorem Ipsum Generator</h2>
+                            <p class="text-xs text-slate-400">Dummy text layout filler</p>
+                        </div>
+                    </div>
+                    <textarea id="lorem-output" rows="2" readonly class="w-full p-2.5 bg-slate-950 border border-slate-800 rounded-xl text-[11px] font-mono text-red-400 outline-none resize-none mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+                </div>
+                <button onclick="generateLorem()" class="w-full py-2.5 px-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition text-xs">Generate Dummy Text</button>
+            </div>
+
+            <!-- 16. URL Extractor Pro -->
+            <div data-category="seo" class="tool-card bg-slate-800/60 border border-slate-700/85 backdrop-blur-md rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:border-amber-500/50 transition">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-2xl">🔍</div>
+                        <div>
+                            <h2 class="text-base font-bold text-white">URL Extractor Pro</h2>
+                            <p class="text-xs text-slate-400">Extract web links from bulk text</p>
+                        </div>
+                    </div>
+                    <textarea id="extractor-input" rows="2" placeholder="Paste text containing URLs..." class="w-full p-2.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white outline-none focus:border-amber-500 mb-2 resize-none"></textarea>
+                </div>
+                <button onclick="extractUrls()" class="w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl transition text-xs">Extract All Links</button>
             </div>
 
         </div>
     </main>
 
-    <!-- Footer الاحترافي -->
+    <!-- Footer -->
     <footer class="border-t border-slate-800 bg-slate-900/50 py-8 text-center text-xs text-slate-500">
-        <p>&copy; 2026 QuickTools Hub. <span data-i18n="rights">All rights reserved. Complete privacy protection.</span></p>
+        <p>&copy; 2026 QuickTools Hub. All rights reserved. Enterprise-grade secure utilities.</p>
     </footer>
 
-    <!-- سكربتات التطبيق ونظام الترجمة والفلترة -->
+    <!-- JavaScript Pro Engine -->
     <script>
-        const translations = {
-            en: {
-                engine: "Enterprise Suite",
-                badge: "Next-Gen Web Utilities",
-                hero_title: "Professional Digital Platform for All Your Needs",
-                hero_desc: "High-performance professional tools running entirely locally for complete privacy, powered by live real-time data.",
-                tab_all: "All Tools",
-                tab_live: "Live Data (API)",
-                tab_media: "Media & Images",
-                tab_security: "Security & Codes",
-                weather_title: "Advanced Live Weather",
-                weather_desc: "High precision real-time weather details",
-                city_placeholder: "Type city name (e.g., Batna, Algiers, Riyadh)...",
-                fetch_weather: "Get Weather",
-                wind_speed: "Wind",
-                humidity: "Humidity",
-                curr_title: "Global Currency Converter",
-                curr_desc: "Live rates with country flags & major currencies",
-                conversion_rate: "Direct live rate:",
-                convert_now: "Convert Currency Now",
-                img_title: "Smart Image Compressor",
-                img_desc: "Control quality and file size",
-                drop_text: "Drag image here or choose file",
-                quality_label: "Quality Level:",
-                download_img: "Download Compressed Image",
-                conv_title: "Image Format Converter",
-                conv_desc: "Convert to fast WebP format",
-                ready_webp: "Image ready in WebP format!",
-                download_webp: "Download WebP",
-                qr_title: "QR Code Generator",
-                qr_desc: "Convert links to fast QR codes",
-                qr_placeholder: "Type link or text here...",
-                qr_waiting: "Code will appear here...",
-                generate_qr: "Generate QR Code",
-                pwd_title: "Password Generator",
-                pwd_desc: "High security complex passwords",
-                pwd_length: "Length:",
-                generate_btn: "Generate & Copy Password",
-                rights: "All rights reserved. Complete privacy protection."
-            },
-            ar: {
-                engine: "Enterprise Suite",
-                badge: "Next-Gen Web Utilities",
-                hero_title: "منصة رقمية متكاملة لجميع احتياجاتك",
-                hero_desc: "أدوات احترافية عالية الأداء تعمل بمعالجة محلية بالكامل تضمن الخصوصية التامة، مدعومة ببيانات حية ومباشرة.",
-                tab_all: "جميع الأدوات",
-                tab_live: "البيانات الحية (API)",
-                tab_media: "الصور والمعالجة",
-                tab_security: "الأمان والأكواد",
-                weather_title: "الطقس اللحظي المطور",
-                weather_desc: "حالة الطقس والتفاصيل بدقة عالية",
-                city_placeholder: "اكتب اسم المدينة (مثل: باتنة، الجزائر، الرياض)...",
-                fetch_weather: "جلب حالة الطقس",
-                wind_speed: "الرياح",
-                humidity: "الرطوبة",
-                curr_title: "محول العملات العالمي",
-                curr_desc: "أسعار حية مع أعلام الدول والعملات الكبرى",
-                conversion_rate: "السعر المباشر:",
-                convert_now: "تحويل العملة الآن",
-                img_title: "ضغط الصور الذكي",
-                img_desc: "تحكم بدقة الضغط والحجم",
-                drop_text: "اسحب الصورة هنا أو اختر ملفاً",
-                quality_label: "مستوى الجودة:",
-                download_img: "تحميل الصورة المضغوطة",
-                conv_title: "محول صيغ الصور",
-                conv_desc: "تحويل إلى WebP السريعة",
-                ready_webp: "تم تجهيز الصورة بصيغة WebP!",
-                download_webp: "تحميل بصيغة WebP",
-                qr_title: "منشئ رموز QR",
-                qr_desc: "تحويل الروابط إلى QR سريعة",
-                qr_placeholder: "اكتب الرابط أو النص هنا...",
-                qr_waiting: "سيظهر الكود هنا...",
-                generate_qr: "إنشاء رمز QR",
-                pwd_title: "مولد كلمات المرور",
-                pwd_desc: "حماية فائقة بكلمات معقدة",
-                pwd_length: "الطول:",
-                generate_btn: "توليد ونسخ كلمة المرور",
-                rights: "جميع الحقوق محفوظة. حماية كاملة للخصوصية والبيانات."
-            },
-            fr: {
-                engine: "Suite Professionnelle",
-                badge: "Utilitaires Web de Nouvelle Génération",
-                hero_title: "Plateforme Numérique Professionnelle",
-                hero_desc: "Outils hautes performances fonctionnant entièrement en local pour une confidentialité totale, alimentés en temps réel.",
-                tab_all: "Tous les Outils",
-                tab_live: "Données en Direct",
-                tab_media: "Médias et Images",
-                tab_security: "Sécurité et Codes",
-                weather_title: "Météo Avancée",
-                weather_desc: "Détails météo en temps réel de haute précision",
-                city_placeholder: "Entrez la ville (ex: Batna, Alger, Paris)...",
-                fetch_weather: "Obtenir la Météo",
-                wind_speed: "Vent",
-                humidity: "Humidité",
-                curr_title: "Convertisseur de Devises Mondial",
-                curr_desc: "Taux en direct avec drapeaux et devises majeures",
-                conversion_rate: "Taux en direct :",
-                convert_now: "Convertir Maintenant",
-                img_title: "Compresseur d'Images",
-                img_desc: "Contrôler la qualité et la taille",
-                drop_text: "Glissez l'image ici ou choisissez",
-                quality_label: "Niveau de Qualité :",
-                download_img: "Télécharger l'image",
-                conv_title: "Convertisseur WebP",
-                conv_desc: "Convertir au format WebP rapide",
-                ready_webp: "Image prête au format WebP !",
-                download_webp: "Télécharger WebP",
-                qr_title: "Générateur QR Code",
-                qr_desc: "Convertir des liens en QR codes",
-                qr_placeholder: "Tapez le lien ou le texte...",
-                qr_waiting: "Le code apparaîtra ici...",
-                generate_qr: "Générer le QR Code",
-                pwd_title: "Générateur de Mots de Passe",
-                pwd_desc: "Mots de passe hautement sécurisés",
-                pwd_length: "Longueur :",
-                generate_btn: "Générer et Copier",
-                rights: "Tous droits réservés. Protection de la vie privée."
-            },
-            es: {
-                engine: "Suite Profesional",
-                badge: "Utilidades Web de Nueva Generación",
-                hero_title: "Plataforma Digital Profesional",
-                hero_desc: "Herramientas de alto rendimiento que se ejecutan localmente para total privacidad, impulsadas por datos en tiempo real.",
-                tab_all: "Todas las Herramientas",
-                tab_live: "Datos en Vivo",
-                tab_media: "Medios e Imágenes",
-                tab_security: "Seguridad y Códigos",
-                weather_title: "Clima Avanzado en Vivo",
-                weather_desc: "Detalles meteorológicos de alta precisión",
-                city_placeholder: "Escribe la ciudad (ej: Batna, Argel, Madrid)...",
-                fetch_weather: "Obtener Clima",
-                wind_speed: "Viento",
-                humidity: "Humedad",
-                curr_title: "Conversor de Monedas Global",
-                curr_desc: "Tasas en vivo con banderas y monedas principales",
-                conversion_rate: "Tasa directa en vivo:",
-                convert_now: "Convertir Moneda",
-                img_title: "Compresor de Imágenes",
-                img_desc: "Controlar calidad y tamaño",
-                drop_text: "Arrastra la imagen o elige archivo",
-                quality_label: "Nivel de Calidad:",
-                download_img: "Descargar Imagen",
-                conv_title: "Conversor WebP",
-                conv_desc: "Convertir a formato WebP rápido",
-                ready_webp: "¡Imagen lista en formato WebP!",
-                download_webp: "Descargar WebP",
-                qr_title: "Generador QR",
-                qr_desc: "Convierte enlaces en códigos QR",
-                qr_placeholder: "Escribe enlace o texto...",
-                qr_waiting: "El código aparecerá aquí...",
-                generate_qr: "Generar Código QR",
-                pwd_title: "Generador de Contraseñas",
-                pwd_desc: "Contraseñas seguras y complejas",
-                pwd_length: "Longitud:",
-                generate_btn: "Generar y Copier",
-                rights: "Todos los derechos reservados. Protección de privacidad."
-            }
-        };
-
-        function changeLanguage(lang) {
-            document.documentElement.lang = lang;
-            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-            
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
-            });
-
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-i18n-placeholder');
-                if (translations[lang] && translations[lang][key]) {
-                    el.placeholder = translations[lang][key];
-                }
-            });
-        }
-
+        function toggleDarkMode() { document.documentElement.classList.toggle('dark'); }
+        
         function filterTools(category) {
-            ['all', 'live', 'media', 'security'].forEach(cat => {
+            ['all', 'live', 'media', 'security', 'seo'].forEach(cat => {
                 const btn = document.getElementById(`filter-${cat}`);
-                if (cat === category) {
-                    btn.className = "px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition";
-                } else {
-                    btn.className = "px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition";
+                if(btn) {
+                    btn.className = cat === category ? 
+                        "px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition" : 
+                        "px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 font-bold text-sm hover:bg-slate-700 transition";
                 }
             });
-
             document.querySelectorAll('.tool-card').forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.display = (category === 'all' || card.getAttribute('data-category') === category) ? 'flex' : 'none';
             });
         }
 
-        function toggleDarkMode() {
-            const html = document.documentElement;
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-            } else {
-                html.classList.add('dark');
-            }
+        // 1. Weather
+        async function getWeather() {
+            const city = document.getElementById('city-input').value.trim();
+            if(!city) return alert("Please enter a city name!");
+            fetchWeatherData(city);
         }
-
-        // 1. الطقس المطور مع الرطوبة والرياح
-        const cityInput = document.getElementById('city-input');
-        const getWeatherBtn = document.getElementById('get-weather-btn');
-        const weatherResult = document.getElementById('weather-result');
-        const wCityName = document.getElementById('w-city-name');
-        const wTemp = document.getElementById('w-temp');
-        const wWind = document.getElementById('w-wind');
-        const wHumidity = document.getElementById('w-humidity');
-
-        getWeatherBtn.addEventListener('click', async () => {
-            const cityName = cityInput.value.trim();
-            if (!cityName) return alert('Please enter a city name');
-            try {
-                const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1`);
-                const geoData = await geoRes.json();
-                if (!geoData.results || geoData.results.length === 0) return alert('City not found');
-                const { latitude, longitude, name, country } = geoData.results[0];
-
-                const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
-                const weatherData = await weatherRes.json();
-
-                wCityName.textContent = `${name}, ${country || ''}`;
-                wTemp.textContent = `${weatherData.current_weather.temperature}°C`;
-                wWind.textContent = `${weatherData.current_weather.windspeed} km/h`;
-                wHumidity.textContent = `${Math.floor(Math.random() * 40) + 40}%`;
-                weatherResult.classList.remove('hidden');
-            } catch (e) {
-                alert('Error fetching weather data');
-            }
-        });
-
-        // 2. العملات العالمية مع الأعلام
-        const amountInput = document.getElementById('amount-input');
-        const fromCurrency = document.getElementById('from-currency');
-        const toCurrency = document.getElementById('to-currency');
-        const convertBtn = document.getElementById('convert-btn');
-        const conversionResult = document.getElementById('conversion-result');
-        const convertedValue = document.getElementById('converted-value');
-
-        convertBtn.addEventListener('click', async () => {
-            const amount = parseFloat(amountInput.value);
-            const from = fromCurrency.value;
-            const to = toCurrency.value;
-            if (isNaN(amount) || amount <= 0) return alert('Invalid amount');
-            try {
-                const res = await fetch(`https://open.er-api.com/v6/latest/${from}`);
+        async function getWeatherByGPS() {
+            if(!navigator.geolocation) return alert("Geolocation is not supported by your browser");
+            navigator.geolocation.getCurrentPosition(async (position) => {
+                const { latitude, longitude } = position.coords;
+                const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
                 const data = await res.json();
-                if (data && data.rates && data.rates[to]) {
-                    const result = (amount * data.rates[to]).toFixed(2);
-                    convertedValue.textContent = `${result} ${to}`;
-                    conversionResult.classList.remove('hidden');
+                document.getElementById('w-city-name').innerText = "Current GPS Location";
+                document.getElementById('w-temp').innerText = `${data.current_weather.temperature}°C`;
+                document.getElementById('w-wind').innerText = `${data.current_weather.windspeed} km/h`;
+                document.getElementById('weather-result').classList.remove('hidden');
+            });
+        }
+        async function fetchWeatherData(city) {
+            try {
+                const geo = await (await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`)).json();
+                if(!geo.results) return alert("City not found!");
+                const { latitude, longitude, name, country } = geo.results[0];
+                const weather = await (await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`)).json();
+                document.getElementById('w-city-name').innerText = `${name}, ${country || ''}`;
+                document.getElementById('w-temp').innerText = `${weather.current_weather.temperature}°C`;
+                document.getElementById('w-wind').innerText = `${weather.current_weather.windspeed} km/h`;
+                document.getElementById('weather-result').classList.remove('hidden');
+            } catch(e) { alert("Error fetching weather."); }
+        }
+
+        // 2. Currency
+        function swapCurrencies() {
+            const from = document.getElementById('from-currency');
+            const to = document.getElementById('to-currency');
+            const temp = from.value; from.value = to.value; to.value = temp;
+            convertCurrency();
+        }
+        async function convertCurrency() {
+            const amount = document.getElementById('amount-input').value;
+            const from = document.getElementById('from-currency').value;
+            const to = document.getElementById('to-currency').value;
+            try {
+                const res = await (await fetch(`https://open.er-api.com/v6/latest/${from}`)).json();
+                if(res.rates && res.rates[to]) {
+                    document.getElementById('converted-value').innerText = `${(amount * res.rates[to]).toFixed(2)} ${to}`;
+                    document.getElementById('conversion-result').classList.remove('hidden');
                 }
-            } catch (e) {
-                alert('Currency conversion error');
+            } catch(e) { alert("Currency conversion error."); }
+        }
+
+        // 3. Image Compressor
+        let originalImageObj = null;
+        function handleImage(input) {
+            if(input.files && input.files[0]) {
+                const file = input.files[0];
+                document.getElementById('original-size').innerText = `${(file.size / 1024).toFixed(1)} KB`;
+                const reader = new FileReader();
+                reader.onload = e => {
+                    const img = new Image();
+                    img.onload = () => {
+                        originalImageObj = img;
+                        compressAndShow(img, 0.8);
+                        document.getElementById('controls-container').classList.remove('hidden');
+                        document.getElementById('result-container').classList.remove('hidden');
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
             }
-        });
-
-        // 3. ضغط الصور
-        const dropZone = document.getElementById('drop-zone');
-        const imageInput = document.getElementById('image-input');
-        const qualityRange = document.getElementById('quality-range');
-        const qualityValue = document.getElementById('quality-value');
-        const controlsContainer = document.getElementById('controls-container');
-        const resultContainer = document.getElementById('result-container');
-        const originalSizeElem = document.getElementById('original-size');
-        const compressedSizeElem = document.getElementById('compressed-size');
-        const downloadBtn = document.getElementById('download-btn');
-
-        let currentFile = null, compressedBlobUrl = null;
-        dropZone.addEventListener('click', () => imageInput.click());
-        imageInput.addEventListener('change', (e) => { if (e.target.files.length) handleImageFile(e.target.files[0]); });
-
-        function formatBytes(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024, sizes = ['Bytes', 'KB', 'MB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        function updateQuality(val) {
+            document.getElementById('quality-value').innerText = `${val}%`;
+            if(originalImageObj) compressAndShow(originalImageObj, val / 100);
+        }
+        function compressAndShow(img, quality) {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width; canvas.height = img.height;
+            canvas.getContext('2d').drawImage(img, 0, 0);
+            const dataUrl = canvas.toDataURL('image/jpeg', quality);
+            const sizeKb = Math.round((dataUrl.length - 'data:image/jpeg;base64,'.length) * 3/4 / 1024);
+            document.getElementById('compressed-size').innerText = `${sizeKb} KB`;
+            const dl = document.getElementById('download-btn');
+            dl.href = dataUrl; dl.download = "optimized-image.jpg"; dl.classList.remove('hidden');
         }
 
-        function handleImageFile(file) {
-            currentFile = file;
-            originalSizeElem.textContent = formatBytes(file.size);
-            controlsContainer.classList.remove('hidden');
-            compressImage();
+        // 4. Text Metrics
+        function countText() {
+            const text = document.getElementById('text-counter-input').value.trim();
+            const words = text === '' ? 0 : text.split(/\s+/).length;
+            document.getElementById('word-count').innerText = words;
+            document.getElementById('char-count').innerText = text.length;
+            document.getElementById('read-time').innerText = `${Math.ceil(words / 200 * 60)}s`;
+        }
+        function clearTextCounter() { document.getElementById('text-counter-input').value = ''; countText(); }
+
+        // 5. QR Code Pro
+        let qrDataUrl = "";
+        function generateQRCode() {
+            const text = document.getElementById('qr-input').value.trim();
+            if(!text) return alert("Enter URL or text!");
+            qrDataUrl = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(text)}`;
+            document.getElementById('qr-code-box').innerHTML = `<img src="${qrDataUrl}" alt="QR" class="rounded-xl mx-auto"/>`;
+        }
+        function downloadQRCode() {
+            if(!qrDataUrl) return alert("Generate QR code first!");
+            const a = document.createElement('a'); a.href = qrDataUrl; a.download = "qrcode.png"; a.click();
         }
 
-        qualityRange.addEventListener('input', (e) => {
-            qualityValue.textContent = e.target.value + '%';
-            if (currentFile) compressImage();
-        });
-
-        function compressImage() {
-            if (!currentFile) return;
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.width; canvas.height = img.height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0);
-                    canvas.toBlob((blob) => {
-                        compressedSizeElem.textContent = formatBytes(blob.size);
-                        compressedBlobUrl = URL.createObjectURL(blob);
-                        resultContainer.classList.remove('hidden');
-                        downloadBtn.classList.remove('hidden');
-                    }, 'image/jpeg', parseInt(qualityRange.value) / 100);
-                };
-                img.src = event.target.result;
-            };
-            reader.readAsDataURL(currentFile);
-        }
-
-        downloadBtn.addEventListener('click', () => {
-            if (!compressedBlobUrl) return;
-            const a = document.createElement('a');
-            a.href = compressedBlobUrl; a.download = 'opt-' + currentFile.name;
-            a.click();
-        });
-
-        // 4. تحويل WebP
-        const convDropZone = document.getElementById('conv-drop-zone');
-        const convImageInput = document.getElementById('conv-image-input');
-        const convResultContainer = document.getElementById('conv-result-container');
-        const convDownloadBtn = document.getElementById('conv-download-btn');
-        let webpBlobUrl = null, convFileName = 'converted.webp';
-
-        convDropZone.addEventListener('click', () => convImageInput.click());
-        convImageInput.addEventListener('change', (e) => { if (e.target.files.length) handleWebp(e.target.files[0]); });
-
-        function handleWebp(file) {
-            convFileName = file.name.substring(0, file.name.lastIndexOf('.')) + '.webp';
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.width; canvas.height = img.height;
-                    canvas.getContext('2d').drawImage(img, 0, 0);
-                    canvas.toBlob((blob) => {
-                        webpBlobUrl = URL.createObjectURL(blob);
-                        convResultContainer.classList.remove('hidden');
-                        convDownloadBtn.classList.remove('hidden');
-                    }, 'image/webp', 0.9);
-                };
-                img.src = event.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-
-        convDownloadBtn.addEventListener('click', () => {
-            if (!webpBlobUrl) return;
-            const a = document.createElement('a');
-            a.href = webpBlobUrl; a.download = convFileName;
-            a.click();
-        });
-
-        // 5. QR Code
-        const qrInput = document.getElementById('qr-input');
-        const generateQrBtn = document.getElementById('generate-qr-btn');
-        const qrCodeBox = document.getElementById('qr-code-box');
-
-        generateQrBtn.addEventListener('click', () => {
-            const val = qrInput.value.trim();
-            if (!val) return alert('Please enter text or a link');
-            qrCodeBox.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(val)}" alt="QR" class="rounded-xl">`;
-        });
-
-        // 6. مولد الكلمات السرية
-        const lengthRange = document.getElementById('length-range');
-        const lengthValue = document.getElementById('length-value');
-        const passwordOutput = document.getElementById('password-output');
-        const generatePwdBtn = document.getElementById('generate-pwd-btn');
-
-        lengthRange.addEventListener('input', (e) => {
-            lengthValue.textContent = e.target.value;
-            generatePassword();
-        });
-
+        // 6. Password Pro
         function generatePassword() {
+            const len = document.getElementById('length-range').value;
             const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!";
-            let pwd = "";
-            for (let i = 0; i < parseInt(lengthRange.value); i++) {
-                pwd += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            passwordOutput.value = pwd;
+            let pwd = Array.from({length: len}, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+            document.getElementById('password-output').value = pwd;
+            navigator.clipboard.writeText(pwd);
+            alert("Secure password generated and copied!");
         }
 
-        generatePwdBtn.addEventListener('click', () => {
-            generatePassword();
-            passwordOutput.select();
-            navigator.clipboard.writeText(passwordOutput.value);
-            alert('Password generated and copied successfully!');
-        });
-        generatePassword();
+        // 7. SHA-256
+        async function generateHash() {
+            const text = document.getElementById('hash-input').value;
+            if(!text) { document.getElementById('hash-output').innerText = "--"; return; }
+            const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+            document.getElementById('hash-output').innerText = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        function copyHash() {
+            const h = document.getElementById('hash-output').innerText;
+            if(h !== "--") { navigator.clipboard.writeText(h); alert("Hash copied!"); }
+        }
+
+        // 8. Case Converter
+        function convertCase(type) {
+            const ta = document.getElementById('case-input');
+            if(!ta.value) return;
+            if(type === 'upper') ta.value = ta.value.toUpperCase();
+            if(type === 'lower') ta.value = ta.value.toLowerCase();
+            if(type === 'title') ta.value = ta.value.replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase());
+        }
+
+        // 9. SEO Meta
+        function generateMetaTags() {
+            const t = document.getElementById('meta-title').value;
+            const d = document.getElementById('meta-desc').value;
+            const res = `<title>${t}</title>\n<meta name="description" content="${d}">`;
+            document.getElementById('meta-output').value = res;
+            navigator.clipboard.writeText(res);
+            alert("Meta tags copied to clipboard!");
+        }
+
+        // 10. Robots.txt
+        function generateRobots() {
+            const s = document.getElementById('sitemap-url').value;
+            let res = "User-agent: *\nAllow: /";
+            if(s) res += `\n\nSitemap: ${s}`;
+            document.getElementById('robots-output').value = res;
+            alert("Robots.txt generated!");
+        }
+
+        // 11. Slug Generator
+        function generateSlug() {
+            const v = document.getElementById('slug-input').value;
+            const slug = v.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+            document.getElementById('slug-output').innerText = slug || '--';
+        }
+        function copySlug() {
+            const s = document.getElementById('slug-output').innerText;
+            if(s !== '--') { navigator.clipboard.writeText(s); alert("Slug copied!"); }
+        }
+
+        // 12. Text Cleaner
+        function cleanText() {
+            const el = document.getElementById('cleaner-input');
+            el.value = el.value.replace(/\s+/g, ' ').trim();
+            alert("Text successfully cleaned!");
+        }
+
+        // 13. BMI Pro
+        function calculateBMI() {
+            const w = parseFloat(document.getElementById('bmi-weight').value);
+            const h = parseFloat(document.getElementById('bmi-height').value) / 100;
+            if(!w || !h) return alert("Enter valid weight and height!");
+            const bmi = (w / (h * h)).toFixed(1);
+            let status = "Normal Weight";
+            if(bmi < 18.5) status = "Underweight";
+            else if(bmi >= 25 && bmi < 30) status = "Overweight";
+            else if(bmi >= 30) status = "Obese";
+            document.getElementById('bmi-value').innerText = bmi;
+            document.getElementById('bmi-status').innerText = status;
+            document.getElementById('bmi-result').classList.remove('hidden');
+        }
+
+        // 14. HEX to RGB Pro
+        function convertHexToRgb() {
+            let hex = document.getElementById('hex-input').value.replace('#', '');
+            if(hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+            if(hex.length !== 6) return;
+            const num = parseInt(hex, 16);
+            const r = (num >> 16) & 255, g = (num >> 8) & 255, b = num & 255;
+            document.getElementById('rgb-output').innerText = `rgb(${r}, ${g}, ${b})`;
+            document.getElementById('color-preview').style.backgroundColor = `#${hex}`;
+        }
+
+        // 15. Lorem Ipsum
+        function generateLorem() {
+            const texts = [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            ];
+            document.getElementById('lorem-output').value = texts[Math.floor(Math.random() * texts.length)];
+        }
+
+        // 16. URL Extractor
+        function extractUrls() {
+            const text = document.getElementById('extractor-input').value;
+            const urls = text.match(/(https?:\/\/[^\s]+)/g);
+            if(urls) {
+                navigator.clipboard.writeText(urls.join('\n'));
+                alert(`Extracted ${urls.length} links and copied to clipboard!`);
+            } else {
+                alert("No valid URLs found in text!");
+            }
+        }
     </script>
-    <!-- Cloudflare Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cf8008d7f2f47b29e20ed8c30cba1c7"}'></script>
 </body>
 </html>
